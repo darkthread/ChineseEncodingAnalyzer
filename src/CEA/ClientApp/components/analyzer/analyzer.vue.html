@@ -1,0 +1,116 @@
+<template>
+    <div class="enc-analyzer form-horizontal">
+        <h2 class="text-center">中文編碼解析線上版 Ver 1.0 by Jeffrey Lee</h2>
+        <hr />
+        <div class="form-row">
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="text">
+                    中文內容
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" v-model="text" id="text" >
+                </div>
+                <div class="col-sm-1">
+                    <button typte="button" class="btn btn-primary" @click="encodeText">解析</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="big5">
+                    BIG5
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" v-model="codeBig5" :title="pvwBig5" id="big5" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="gb2312">
+                    GB2312
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" v-model="codeGb2312" :title="pvwGb2312" id="gb2312" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="ucs2">
+                    UCS2
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" v-model="codeUcs2" :title="pvwUcs2" id="ucs2" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="utf8">
+                    UTF-8
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" v-model="codeUtf8" :title="pvwUtf8" id="utf8" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="utf16">
+                    UTF-16
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" v-model="codeUtf16" :title="pvwUtf16" id="utf16" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="ueBig5">
+                    UrlEncode Big5
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" v-model="ueBig5" id="ueBig5">
+                </div>
+                <div class="col-sm-1">
+                    <button typte="button" class="btn btn-info" @click="decodeUrlEnc('Big5')">解碼</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="ueUnicode">
+                    UrlEncodeUnicode
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" v-model="ueUnicode" id="ueUnicode">
+                </div>
+                <div class="col-sm-1">
+                    <button typte="button" class="btn btn-info" @click="decodeUrlEnc('Unicode')">解碼</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="ueUtf8">
+                    UrlEncode UTF-8
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" v-model="ueUtf8" id="ueUtf8">
+                </div>
+                <div class="col-sm-1">
+                    <button typte="button" class="btn btn-info" @click="decodeUrlEnc('Utf8')">解碼</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="ncr">
+                    NCR
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" v-model="codeNcr" id="ncr">
+                </div>
+                <div class="col-sm-1">
+                    <button typte="button" class="btn btn-info" @click="decodeNcr">解碼</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-lable col-sm-2" for="ueUtf8">
+                    信件主旨解碼
+                </label>
+                <div class="col-sm-9">
+                    <textarea v-model="mailSubject"></textarea>
+                </div>
+                <div class="col-sm-1">
+                    <button typte="button" class="btn btn-danger" @click="decodeMailSubject">解碼</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="./analyzer.ts"></script>

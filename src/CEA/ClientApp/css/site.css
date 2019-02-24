@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    body {
+        padding-top: 50px;
+    }
+}
+
+#app-root {
+    max-width: 1024px;    
+}
+.enc-analyzer .col-sm-2 {
+    text-align: right;
+}
+.enc-analyzer input[type=text] {
+    width: 100%;
+}
+.enc-analyzer input[readonly] {
+    background-color: #eee;
+}
+.enc-analyzer textarea {
+    width: 100%;
+    height: 80px;
+}
