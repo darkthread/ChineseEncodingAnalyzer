@@ -1,5 +1,4 @@
 # 中文編碼解析工具
-=====================
 
 處理中文編碼問題時的方便小工具，原本寫成 Windows Form，從 2006 年開始發展，已有超過十年歷史。現在改寫成 Web 方式並開源囉~ 
 
@@ -9,6 +8,7 @@
 * 2007-01-03 [中文編碼解析工具1.1版](https://blog.darkthread.net/blog/1-1)
 * 2007-09-07 [中文編碼解析工具 Ver 1.2](https://blog.darkthread.net/blog/1040)
 * 2007-09-16 [中文編碼解析工具 Ver 1.3](https://blog.darkthread.net/blog/1083/)
+* 2019-04-13 移植為 Vue.js + TypeScript + ASP.NET Core 版本並開源
 
 ## 程式說明 ##
 
@@ -20,4 +20,4 @@
 為保有過往規格，我選擇了可恥但有用的做法 -
 參考 [HttpUtility 原始碼](https://referencesource.microsoft.com/#System.Web/httpserverutility.cs)，將其中的邏輯搬進專案，復刻成同名元件。
 
-無論如何，已將
+無論如何，算是把原本 WinForm 版的相同邏輯移植成網頁版，並且提供了線上版本：[https://www.darkthread.net/cea](https://www.darkthread.net/cea])，歡迎大家利用。
