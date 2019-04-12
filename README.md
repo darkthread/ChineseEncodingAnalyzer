@@ -20,4 +20,4 @@
 為保有過往規格，我選擇了可恥但有用的做法 -
 參考 [HttpUtility 原始碼](https://referencesource.microsoft.com/#System.Web/httpserverutility.cs)，將其中的邏輯搬進專案，復刻成同名元件。
 
-無論如何，算是把原本 WinForm 版的相同邏輯移植成網頁版，並且提供了線上版本：[https://www.darkthread.net/cea](https://www.darkthread.net/cea])，歡迎大家利用。
+無論如何，算是把原本 WinForm 版的相同邏輯移植成網頁版，並且提供了線上版本：[https://www.darkthread.net/cea](https://www.darkthread.net/cea)，歡迎大家利用。
