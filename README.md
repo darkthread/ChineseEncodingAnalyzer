@@ -8,7 +8,8 @@
 * 2007-01-03 [中文編碼解析工具1.1版](https://blog.darkthread.net/blog/1-1)
 * 2007-09-07 [中文編碼解析工具 Ver 1.2](https://blog.darkthread.net/blog/1040)
 * 2007-09-16 [中文編碼解析工具 Ver 1.3](https://blog.darkthread.net/blog/1083/)
-* 2019-04-13 移植為 Vue.js + TypeScript + ASP.NET Core 版本並開源
+* 2019-04-13 [移植為 Vue.js + TypeScript + ASP.NET Core 版本並開源](https://blog.darkthread.net/blog/cea-release/)
+* 2021-05-30 [2.0 版](https://blog.darkthread.net/blog/cea-20/)，升級為 ASP.NET Core 5.0，加入字元對映顯示功能
 
 ## 程式說明 ##
 
