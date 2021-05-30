@@ -279,6 +279,7 @@
 ,.f-255 .c-255
  {
     color: red;
+    background-color: white;;
 }
 
 .char {
@@ -288,8 +289,25 @@
     margin-right: 1px;
     cursor: pointer;
 }
+.orig-text > div {
+    display: flex;
+    flex-direction: row;
+}
+.orig-text .char {
+    width: 1.5em;
+    height: 1.8em;
+}
+.char-disp {
+    background-color: #eee;
+    padding: 6px;
+    min-height: 1.8em;
+}
 .char .byte {
     text-align: center;
     padding: 0;
     margin: 0;
+}
+
+.col-sm-9 {
+    margin-left: 0;
 }

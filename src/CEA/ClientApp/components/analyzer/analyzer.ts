@@ -85,6 +85,7 @@ export default class AnalyzerView extends Vue {
                 alert(data.errorMessage);
             }
             else {
+                document.body.className = "";
                 this.injectProperties(data);
             }
         });

@@ -1,6 +1,9 @@
 <template>
     <div class="enc-analyzer form-horizontal">
-        <h2 class="text-center">中文編碼解析線上版 Ver 2.0 by Jeffrey Lee</h2>
+        <h2 class="text-center">中文編碼解析線上版 Ver 2.0</h2>
+        <h4 class="text-center">by Jeffrey 
+            <a href="https://facebook.com/darkthread.net" target="_blank">黑暗執行緒</a>
+        </h4>
         <hr />
         <div class="form-row">
             <div class="form-group">
@@ -16,7 +19,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-2"></div>
-                <div class="col-sm-10">
+                <div class="col-sm-10 orig-text char-disp">
                     <BytesDisp v-bind:bytes="charsOrig"></BytesDisp>
                 </div>
             </div>
@@ -24,7 +27,7 @@
                 <label class="control-lable col-sm-2" for="big5">
                     BIG5
                 </label>
-                <div class="col-sm-10">
+                <div class="col-sm-10 char-disp">
                     <BytesDisp v-bind:bytes="charsBig5" :title="pvwBig5"></BytesDisp>
                 </div>
             </div>
@@ -32,7 +35,7 @@
                 <label class="control-lable col-sm-2" for="gb2312">
                     GB2312
                 </label>
-                <div class="col-sm-10">
+                <div class="col-sm-10 char-disp">
                     <BytesDisp v-bind:bytes="charsGb2312" :title="pvwGb2312"></BytesDisp>
                 </div>
             </div>
@@ -40,7 +43,7 @@
                 <label class="control-lable col-sm-2" for="ucs2">
                     UCS2
                 </label>
-                <div class="col-sm-10">
+                <div class="col-sm-10 char-disp">
                     <BytesDisp v-bind:bytes="charsUcs2" :title="pvwUcs2"></BytesDisp>
                 </div>
             </div>
@@ -48,7 +51,7 @@
                 <label class="control-lable col-sm-2" for="utf8">
                     UTF-8
                 </label>
-                <div class="col-sm-10">
+                <div class="col-sm-10 char-disp">
                     <BytesDisp v-bind:bytes="charsUtf8" :title="pvwUtf8"></BytesDisp>
                 </div>
             </div>
@@ -56,7 +59,7 @@
                 <label class="control-lable col-sm-2" for="utf16">
                     UTF-16
                 </label>
-                <div class="col-sm-10">
+                <div class="col-sm-10 char-disp">
                     <BytesDisp v-bind:bytes="charsUtf8" :title="pvwUtf16"></BytesDisp>
                 </div>
             </div>
