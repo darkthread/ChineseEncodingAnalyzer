@@ -1,6 +1,6 @@
 <template>
     <div class="enc-analyzer form-horizontal">
-        <h2 class="text-center">中文編碼解析線上版 Ver 1.0 by Jeffrey Lee</h2>
+        <h2 class="text-center">中文編碼解析線上版 Ver 2.0 by Jeffrey Lee</h2>
         <hr />
         <div class="form-row">
             <div class="form-group">
@@ -8,10 +8,16 @@
                     中文內容
                 </label>
                 <div class="col-sm-9">
-                    <input type="text" v-model="text" id="text" >
+                    <input type="text" v-model="text" id="text">
                 </div>
                 <div class="col-sm-1">
                     <button typte="button" class="btn btn-primary" @click="encodeText">解析</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <BytesDisp v-bind:bytes="charsOrig"></BytesDisp>
                 </div>
             </div>
             <div class="form-group">
@@ -19,7 +25,7 @@
                     BIG5
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" v-model="codeBig5" :title="pvwBig5" id="big5" readonly>
+                    <BytesDisp v-bind:bytes="charsBig5" :title="pvwBig5"></BytesDisp>
                 </div>
             </div>
             <div class="form-group">
@@ -27,7 +33,7 @@
                     GB2312
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" v-model="codeGb2312" :title="pvwGb2312" id="gb2312" readonly>
+                    <BytesDisp v-bind:bytes="charsGb2312" :title="pvwGb2312"></BytesDisp>
                 </div>
             </div>
             <div class="form-group">
@@ -35,7 +41,7 @@
                     UCS2
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" v-model="codeUcs2" :title="pvwUcs2" id="ucs2" readonly>
+                    <BytesDisp v-bind:bytes="charsUcs2" :title="pvwUcs2"></BytesDisp>
                 </div>
             </div>
             <div class="form-group">
@@ -43,7 +49,7 @@
                     UTF-8
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" v-model="codeUtf8" :title="pvwUtf8" id="utf8" readonly>
+                    <BytesDisp v-bind:bytes="charsUtf8" :title="pvwUtf8"></BytesDisp>
                 </div>
             </div>
             <div class="form-group">
@@ -51,7 +57,7 @@
                     UTF-16
                 </label>
                 <div class="col-sm-10">
-                    <input type="text" v-model="codeUtf16" :title="pvwUtf16" id="utf16" readonly>
+                    <BytesDisp v-bind:bytes="charsUtf8" :title="pvwUtf16"></BytesDisp>
                 </div>
             </div>
             <div class="form-group">

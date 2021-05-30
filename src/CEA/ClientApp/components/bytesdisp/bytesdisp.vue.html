@@ -1,0 +1,11 @@
+<template>
+    <div :title="title">
+        <span v-for="(ary, index) in bytes" :class="'char c-'+index" @click="focusCharIndex(index)">
+            <span v-for="b in ary" class="byte">
+                {{b}}
+            </span>
+        </span>
+    </div>
+</template>
+<link href="./bytesdisp.css" rel="stylesheet" />
+<script src="./bytesdisp.ts"></script>

@@ -8,6 +8,12 @@ interface AnalysisResult {
     codeUcs2: string;
     codeUtf8: string;
     codeUtf16: string;
+    charsBig5: string[][];
+    charsGb2312: string[][];
+    charsUcs2: string[][];
+    charsUtf8: string[][];
+    charsUtf16: string[][];
+    charsOrig: string[][];
     pvwBig5: string;
     pvwGb2312: string;
     pvwUcs2: string;
@@ -22,8 +28,13 @@ interface AnalysisResult {
 }
 
 //https://github.com/vuejs/vue-class-component
-@Component
-export default class CounterComponent extends Vue {
+@Component({
+    components: {
+        BytesDisp: require('../bytesdisp/bytesdisp.vue.html')
+    }
+})
+export default class AnalyzerView extends Vue {
+
     currentcount: number = 0;
 
     text: string = "黑暗執行緒";
@@ -32,6 +43,13 @@ export default class CounterComponent extends Vue {
     codeUcs2: string = "";
     codeUtf8: string = "";
     codeUtf16: string = "";
+    charsBig5: string[][] = [];
+    charsGb2312: string[][] = [];
+    charsUcs2: string[][] = [];
+    charsUtf8: string[][] = [];
+    charsUtf16: string[][] = [];
+    charsOrig: string[][] = [];
+
     pvwBig5: string = "";
     pvwGb2312: string = "";
     pvwUcs2: string = "";
